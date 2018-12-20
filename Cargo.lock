@@ -592,7 +592,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "menstruation"
 version = "0.1.0"
-source = "git+https://github.com/kmein/menstruation.rs#88f2cd782aa9bdfca04befece725906715f00d13"
+source = "git+https://github.com/kmein/menstruation.rs#764aef32b6ec253313d3aa3754ae95ab35e7109e"
 dependencies = [
  "ansi_term 0.11.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "chrono 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",

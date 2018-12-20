@@ -7,7 +7,7 @@ extern crate menstruation;
 extern crate serde_json;
 
 use chrono::{Local, NaiveDate};
-use menstruation::get_menu;
+use menstruation::{codes, menu};
 
 #[get("/<mensa_code>")]
 fn menu(mensa_code: u16) -> String {
@@ -18,8 +18,16 @@ fn menu(mensa_code: u16) -> String {
 #[get("/<mensa_code>/<date>")]
 fn menu_date(mensa_code: u16, date: String) -> String {
     let naive_date = NaiveDate::parse_from_str(&date, "%Y-%m-%d");
-    match get_menu(&mensa_code.into(), &naive_date.ok()) {
+    match menu::get(&mensa_code.into(), naive_date.ok()) {
         Ok(menu_response) => format!("{}", serde_json::to_string_pretty(&menu_response).unwrap()),
+        Err(e) => e,
+    }
+}
+
+#[get("/")]
+fn codes() -> String {
+    match codes::get() {
+        Ok(codes_response) => format!("{}", serde_json::to_string_pretty(&codes_response).unwrap()),
         Err(e) => e,
     }
 }
@@ -27,5 +35,6 @@ fn menu_date(mensa_code: u16, date: String) -> String {
 fn main() {
     rocket::ignite()
         .mount("/menu", routes![menu, menu_date])
+        .mount("/codes", routes![codes])
         .launch();
 }
