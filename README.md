@@ -1,4 +1,4 @@
-# menstruation-server.rs [![Build Status](https://travis-ci.org/kmein/menstruation-server.rs.svg?branch=master)](https://travis-ci.org/kmein/menstruation-server.rs)
+# ![Menstruation. Regel dein Essen.](https://img.shields.io/badge/menstruation-Regel%20dein%20Essen.-red.svg?style=for-the-badge) [![Build Status](https://travis-ci.org/kmein/menstruation-server.rs.svg?branch=master)](https://travis-ci.org/kmein/menstruation-server.rs)
 
 ## API-Beschreibung
 
