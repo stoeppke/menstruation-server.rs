@@ -20,7 +20,7 @@
 ]
 ```
 
-* `/menu/<Mensa-Code>/<YYYY-MM-DD>` Gibt den Speiseplan der Mensa `<Mensa-Code>` am Tag `<YYYY-MM-DD>` zurück. Dabei ist das Datum optional, und es wird der aktuelle Speiseplan zurückgegeben.
+* `/menu/<Mensa-Code>/<YYYY-MM-DD>` Gibt den Speiseplan der Mensa `<Mensa-Code>` am Tag `<YYYY-MM-DD>` zurück.
 
 ```json
 [
